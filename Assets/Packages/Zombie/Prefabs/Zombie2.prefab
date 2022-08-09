@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044863643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000006386212, y: 1.0714285, z: 0.35714284}
+  m_LocalPosition: {x: -0.00000006386212, y: 1.0714285, z: 0.515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -534,7 +534,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -554,10 +554,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b615dcd80224da34faf531c093fb6679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 100
   _oppositeLayer:
     serializedVersion: 2
     m_Bits: 8
   _attackPoint: {fileID: 1044863644}
+  _attackRange: {x: 2, y: 2, z: 3}
 --- !u!1 &2057808353243881084
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour,
    [SerializeField] private AudioSource _audioSource;
    [SerializeField] private Camera _camera;
    private Animator _animator;
+   private bool isShoot = true;
 
    #region ICanShoot
    public float Damage { get => 30f; }
@@ -23,19 +24,32 @@ public class Weapon : MonoBehaviour,
    {
       _animator = GetComponent<Animator>();
       CurrentAmmo = MaxAmmo;
+      GlobalEventManager.PlayerDie += StopShoot;
+   }
+
+   private void OnDisable()
+   {
+      GlobalEventManager.PlayerDie -= StopShoot;
    }
 
    private void Update()
    {
-      if (Input.GetButton("Fire1"))
+      if (isShoot)
       {
-         TryShoot();
+         if (Input.GetButton("Fire1"))
+         {
+            TryShoot();
+         }
+         if (Input.GetKeyDown("F") && (CurrentAmmo != MaxAmmo))
+         {
+            Invoke("Reload", 3f);
+         }
       }
    }
 
    private void TryShoot()
    {
-      if (Time.time > Cooldown && CurrentAmmo > 0)
+      if ((Time.time > Cooldown) && (CurrentAmmo > 0))
          Shoot();
 
       if (CurrentAmmo <= 0)
@@ -64,5 +78,10 @@ public class Weapon : MonoBehaviour,
    private void Reload()
    {
       CurrentAmmo = MaxAmmo;
+   }
+
+   private void StopShoot()
+   {
+      isShoot = false;
    }
 }

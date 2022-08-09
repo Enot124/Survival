@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
+
 
 public class GUIController : MonoBehaviour
 {
@@ -26,5 +28,10 @@ public class GUIController : MonoBehaviour
    {
       scoreCount++;
       _score.text = scoreCount.ToString();
+   }
+
+   public void ToMenu()
+   {
+      SceneManager.LoadScene(0);
    }
 }

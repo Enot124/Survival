@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-   [SerializeField] private ZombieFactory _zombieFactory;
+   [SerializeField] private EnemyFactory _enemyFactory;
+   [SerializeField] private float _spawnSpeed = 3f;
    private bool _isSpawn = true;
 
    private void Start()
@@ -21,8 +22,8 @@ public class SpawnEnemies : MonoBehaviour
    {
       while (_isSpawn)
       {
-         var Zombie = _zombieFactory.GetNewInstance();
-         yield return new WaitForSeconds(2f);
+         var Zombie = _enemyFactory.GetNewInstance();
+         yield return new WaitForSeconds(_spawnSpeed);
       }
    }
 

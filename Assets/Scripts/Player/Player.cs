@@ -10,6 +10,7 @@ public class Player : MonoBehaviour,
 
    public void TakeDamage(float damage)
    {
+      Debug.Log("Damaged " + damage);
       Health -= damage;
       if (Health < 0)
       {

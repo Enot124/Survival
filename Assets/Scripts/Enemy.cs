@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour,
    #endregion ICanMove
 
    #region IHaveHealth
-   private float _health = 100f;
+   [SerializeField] private float _health = 100f;
    public float Health { get => _health; set => _health = value; }
    public bool IsDied { get; set; }
 
@@ -30,11 +30,14 @@ public class Enemy : MonoBehaviour,
    public LayerMask OppositeLayer { get => _oppositeLayer; }
    [SerializeField] private Transform _attackPoint;
    public Transform AttackPoint { get => _attackPoint; }
+   [SerializeField] private Vector3 _attackRange;
+   public Vector3 AttackRange { get => _attackRange; }
 
    #endregion ICanAttack
 
    private Animator _animator;
    private Collider _collider;
+
 
    private void Start()
    {
@@ -50,7 +53,7 @@ public class Enemy : MonoBehaviour,
          Agent.SetDestination(Target.position);
 
          Distance = Vector3.Distance(Target.position, transform.position);
-         if (Distance < 2f && Time.time > Cooldown)
+         if (Distance < 3f && Time.time > Cooldown)
          {
             _animator.SetTrigger("attack");
          }
@@ -79,13 +82,16 @@ public class Enemy : MonoBehaviour,
       Cooldown = Time.time + 1f / AttackSpeed;
 
       Vector3 offset = new Vector3(1, 2, 0);
-      Collider[] hit = Physics.OverlapBox(AttackPoint.position, transform.localScale,
+      Collider[] hit = Physics.OverlapBox(AttackPoint.position, AttackRange,
                                           Quaternion.identity, _oppositeLayer);
+      Debug.Log("Damaged ");
       if (hit.Length != 0)
       {
+
          Player player = hit[0].GetComponent<Player>();
          if (player != null)
          {
+
             player.TakeDamage(Damage);
          }
       }

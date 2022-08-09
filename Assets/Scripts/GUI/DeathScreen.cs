@@ -9,5 +9,6 @@ public class DeathScreen : MonoBehaviour
    private void OnEnable()
    {
       _deathText.text = "You lasted " + _guiController.time + "\nYou killed " + _guiController.scoreCount + " monsters";
+      Cursor.lockState = CursorLockMode.Confined;
    }
 }

@@ -9,6 +9,7 @@ namespace Interfaces
       public float Cooldown { get; set; }
       public LayerMask OppositeLayer { get; }
       public Transform AttackPoint { get; }
+      public Vector3 AttackRange { get; }
       public void Attack();
 
    }
