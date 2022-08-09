@@ -34261,6 +34261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interface
       objectReference: {fileID: 0}
+    - target: {fileID: 8424693005179086270, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
 --- !u!1 &1635619711
@@ -42645,9 +42649,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4824410075758584813, guid: ed59bca655ddf8349acd441518419d76, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4824410075993284324, guid: ed59bca655ddf8349acd441518419d76, type: 3}
       propertyPath: m_Name
       value: FPS Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824410075993284324, guid: ed59bca655ddf8349acd441518419d76, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4824410075993284325, guid: ed59bca655ddf8349acd441518419d76, type: 3}
       propertyPath: m_RootOrder

@@ -14,19 +14,32 @@ public class PlayerMovement : MonoBehaviour
    private float _speed = 10f;
    private Vector3 _velocity;
    private bool _isGrounded;
+   private bool isMove = true;
 
+   private void Start()
+   {
+      GlobalEventManager.PlayerDie += StopMove;
+   }
+
+   private void OnDisable()
+   {
+      GlobalEventManager.PlayerDie -= StopMove;
+   }
 
    private void Update()
    {
-      _moveX = Input.GetAxis("Horizontal");
-      _moveZ = Input.GetAxis("Vertical");
-      if ((_moveX != 0) || (_moveZ != 0))
-         Move();
-
-      CheckGround();
-      if (Input.GetButtonDown("Jump") && _isGrounded)
+      if (isMove)
       {
-         Jump();
+         _moveX = Input.GetAxis("Horizontal");
+         _moveZ = Input.GetAxis("Vertical");
+         if ((_moveX != 0) || (_moveZ != 0))
+            Move();
+
+         CheckGround();
+         if (Input.GetButtonDown("Jump") && _isGrounded)
+         {
+            Jump();
+         }
       }
    }
 
@@ -51,6 +64,11 @@ public class PlayerMovement : MonoBehaviour
    private void Jump()
    {
       _velocity.y = Mathf.Sqrt(_jumpHeight * -2f * _gravity);
+   }
+
+   private void StopMove()
+   {
+      isMove = false;
    }
 }
 

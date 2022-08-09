@@ -12,7 +12,7 @@ public class Player : MonoBehaviour,
    {
       Debug.Log("Damaged " + damage);
       Health -= damage;
-      if (Health < 0)
+      if (Health <= 0)
       {
          Health = 0;
          Die();
@@ -22,6 +22,6 @@ public class Player : MonoBehaviour,
    public void Die()
    {
       IsDied = true;
-      GlobalEventManager.PlayerDie();
+      GlobalEventManager.SendPlayerDie();
    }
 }

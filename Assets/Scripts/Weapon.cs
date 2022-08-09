@@ -40,7 +40,7 @@ public class Weapon : MonoBehaviour,
          {
             TryShoot();
          }
-         if (Input.GetKeyDown("F") && (CurrentAmmo != MaxAmmo))
+         if (Input.GetKeyDown(KeyCode.R) && (CurrentAmmo != MaxAmmo))
          {
             Invoke("Reload", 3f);
          }
