@@ -84,7 +84,6 @@ public class Enemy : MonoBehaviour,
       Vector3 offset = new Vector3(1, 2, 0);
       Collider[] hit = Physics.OverlapBox(AttackPoint.position, AttackRange,
                                           Quaternion.identity, _oppositeLayer);
-      Debug.Log("Damaged ");
       if (hit.Length != 0)
       {
 
