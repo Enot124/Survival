@@ -9899,6 +9899,11 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &572479356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8923704772564738867, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
+  m_PrefabInstance: {fileID: 8424693004705395243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &578055187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16828,6 +16833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -24393,6 +24399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 268957393}
   _deathScreen: {fileID: 1376282117}
+  _settingsScreen: {fileID: 572479356}
 --- !u!4 &1087221899
 Transform:
   m_ObjectHideFlags: 0
@@ -27757,17 +27764,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &1207326900 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8424693005179086256, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-  m_PrefabInstance: {fileID: 8424693004705395243}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caf87a78755baf04f857a50f19d2c16b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1211578266
 GameObject:
   m_ObjectHideFlags: 0
@@ -48018,9 +48014,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1552756023805116741, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
+    - target: {fileID: 5760982463492787021, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8424693003173589360, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -48028,46 +48024,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8424693003173589360, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424693003285644173, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424693003763404649, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424693003763404649, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424693003763404649, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1207326900}
-    - target: {fileID: 8424693003763404649, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424693003763404649, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424693003763404649, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GUIController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424693003763404649, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424693003763404651, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424693004442745284, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
-      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8424693005179086256, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
@@ -48170,7 +48126,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interface
       objectReference: {fileID: 0}
-    - target: {fileID: 8515513075441182376, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
+    - target: {fileID: 8923704772564738867, guid: 2655ae11294988046bc704e9d0dafa0f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

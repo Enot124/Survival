@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour,
    {
       _animator = GetComponent<Animator>();
       _collider = GetComponent<Collider>();
-      _target = GameController.Instance.player;
+      _target = GameController.s_instance.player;
    }
 
    private void Update()

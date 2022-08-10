@@ -36,10 +36,14 @@ public class PlayerMovement : MonoBehaviour
             Move();
 
          CheckGround();
+
          if (Input.GetButtonDown("Jump") && _isGrounded)
          {
             Jump();
          }
+
+         if (Input.GetKeyDown(KeyCode.Escape))
+            GlobalEventManager.SetSettingsMenu();
       }
    }
 
