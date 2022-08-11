@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-   [SerializeField] private float _mouseSensitivity = 1000f;
+   private float _mouseSensitivity = 100f;
    [SerializeField] private Transform _playerBody;
    private float _mouseX;
    private float _mouseY;
