@@ -6,3 +6,11 @@ WASD - movement<br>
 R - reload<br>
 Spacebar - jump<br>
 esc - menu.
+
+Screenshots:<br>
+<img src="https://github.com/Enot124/Survival/blob/main/Screenshots/Screenshot_27.png" title="Screen" alt="Screen" width="600" height="300"/>&nbsp;
+<img src="https://github.com/Enot124/Survival/blob/main/Screenshots/Screenshot_31.png" title="Screen" alt="Screen" width="600" height="300"/>&nbsp;
+<img src="https://github.com/Enot124/Survival/blob/main/Screenshots/Screenshot_32.png" title="Screen" alt="Screen" width="600" height="300"/>&nbsp;
+<img src="https://github.com/Enot124/Survival/blob/main/Screenshots/Screenshot_33.png" title="Screen" alt="Screen" width="600" height="300"/>&nbsp;
+<img src="https://github.com/Enot124/Survival/blob/main/Screenshots/Screenshot_34.png" title="Screen" alt="Screen" width="600" height="300"/>&nbsp;
+
